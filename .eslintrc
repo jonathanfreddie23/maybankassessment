@@ -1,0 +1,113 @@
+{
+	"extends": [
+	  "eslint:recommended",
+	  "plugin:react/recommended",
+	  "airbnb",
+	  "plugin:import/errors",
+	  "plugin:import/warnings",
+	  "plugin:@typescript-eslint/recommended",
+	  "prettier"
+	],
+	"env": {
+	  "browser": true,
+	  "commonjs": true,
+	  "es6": true,
+	  "jest": true,
+	  "node": true
+	},
+	"root": true,
+	"settings": {
+	  "react": {
+		"version": "17.0.1"
+	  },
+	  "import/resolver": {
+		"node": {
+		  "moduleDirectory": ["node_modules", "src/"],
+		  "extensions": [".js", ".jsx", ".ts", ".tsx"]
+		},
+		"babel-module": {}
+	  }
+	},
+	"plugins": ["react", "@typescript-eslint", "prettier"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+	  "ecmaVersion": 6,
+	  "sourceType": "module",
+	  "ecmaFeatures": {
+		"jsx": true,
+		"modules": true,
+		"experimentalObjectRestSpread": true
+	  }
+	},
+	"rules": {
+	  "no-use-before-define": "off",
+	  "@typescript-eslint/no-use-before-define": [
+		"error",
+		{
+		  "variables": false,
+		  "functions": false
+		}
+	  ],
+	  "react/prop-types": "off",
+	  "import/no-anonymous-default-export": "off",
+	  "react/display-name": "off",
+	  "no-unused-vars": "off",
+	  "@typescript-eslint/no-unused-vars": [
+		"warn",
+		{
+		  "argsIgnorePattern": "^_",
+		  "varsIgnorePattern": "^_",
+		  "caughtErrorsIgnorePattern": "^_"
+		}
+	  ],
+	  "class-methods-use-this": "off",
+	  "no-shadow": "off",
+	  "@typescript-eslint/no-shadow": ["error"],
+	  "max-len": ["warn", { "code": 120 }],
+	  "arrow-parens": ["warn", "as-needed"],
+	  "implicit-arrow-linebreak": "off",
+	  "linebreak-style": ["error", "unix"],
+	  "indent": ["warn", 2, { "SwitchCase": 1 }],
+	  "react/jsx-indent": ["warn", 2],
+	  "react/jsx-indent-props": ["warn", 2],
+	  "react/jsx-filename-extension": [
+		"warn",
+		{
+		  "extensions": [".js", ".jsx", ".ts", ".tsx"]
+		}
+	  ],
+	  "react/jsx-props-no-spreading": "off",
+	  "object-curly-newline": ["error", { "consistent": true }],
+	  "jsx-quotes": ["warn", "prefer-single"],
+	  "no-underscore-dangle": "off",
+	  "arrow-body-style": "off",
+	  "react/no-unused-state": "warn",
+	  "import/no-extraneous-dependencies": [
+		"warn",
+		{
+		  "devDependencies": true
+		}
+	  ],
+	  "import/no-cycle": "off",
+	  "import/extensions": [
+		"error",
+		"ignorePackages",
+		{
+		  "js": "never",
+		  "jsx": "never",
+		  "ts": "never",
+		  "tsx": "never"
+		}
+	  ],
+	  "@typescript-eslint/explicit-module-boundary-types": "off",
+	  "no-param-reassign": [
+		"error",
+		{
+		  "props": false
+		}
+	  ],
+	  "react/function-component-definition": "off",
+	  "prettier/prettier": "error"
+	}
+  }
+  

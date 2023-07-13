@@ -1,0 +1,13 @@
+.map {
+  width: 100%;
+  background-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .map {
+    width: 100%;
+    flex: 1;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+}
